@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="Kwaya Master - Sacred Music Digital Library for Choristers">
+  <meta name="theme-color" content="#001F3F">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Kwaya Master">
+  
+  <title>Kwaya Master | Sacred Music</title>
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div id="app" class="app-container">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-content">
+        <i class="fas fa-music fa-3x" style="color: #D4AF37;"></i>
+        <h1>Kwaya Master</h1>
+        <p>Sacred Music Library</p>
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+    
+    <!-- App Content -->
+    <div id="app-content" style="display: none; flex: 1; flex-direction: column; height: 100%;">
+      <!-- Screen Container -->
+      <main id="screen-container" class="screen"></main>
+      
+      <!-- Mini Audio Player -->
+      <div class="audio-player-section" id="audioPlayerSection"></div>
+      
+      <!-- Bottom Navigation -->
+      <nav class="bottom-nav">
+        <button class="nav-item active" data-screen="home">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </button>
+        <button class="nav-item" data-screen="library">
+          <i class="fas fa-music"></i>
+          <span>Library</span>
+        </button>
+        <button class="nav-item" data-screen="audio">
+          <i class="fas fa-headphones"></i>
+          <span>Audio</span>
+        </button>
+        <button class="nav-item" data-screen="downloads">
+          <i class="fas fa-download"></i>
+          <span>Files</span>
+        </button>
+        <button class="nav-item" data-screen="settings">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </button>
+      </nav>
+    </div>
+  </div>
+  
+  <!-- JavaScript Files -->
+  <script src="utils/constants.js"></script>
+  <script src="utils/helpers.js"></script>
+  <script src="services/storage.js"></script>
+  <script src="services/data.js"></script>
+  <script src="components/navigation.js"></script>
+  <script src="components/player.js"></script>
+  <script src="pages/home.js"></script>
+  <script src="pages/library.js"></script>
+  <script src="pages/audio.js"></script>
+  <script src="pages/downloads.js"></script>
+  <script src="pages/settings.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
